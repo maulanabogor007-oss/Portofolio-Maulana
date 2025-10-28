@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kontak Saya</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="about.html">Tentang Saya</a>
+      <a href="portfolio.html">Portofolio</a>
+      <a href="contact.html" class="active">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <h2>Hubungi Saya</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Nama" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Pesan Anda..." required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+    <p id="response"></p>
+  </section>
+
+  <script>
+    function sendMessage(e) {
+      e.preventDefault();
+      document.getElementById("response").innerText = "Pesan berhasil dikirim! Terima kasih telah menghubungi saya.";
+    }
+  </script>
+
+  <footer>
+    <p>© 2025 Maulana Malik Ibrahim</p>
+  </footer>
+</body>
+</html>
